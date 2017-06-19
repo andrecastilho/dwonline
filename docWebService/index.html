@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Documento de integração WebService DwOnline</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="webservice, gratuito, gratis, cep, ibge, json, xml, query, piped, endereco, busca cep, correios, pesquisa cep, ajax, serviço">
+        <meta name="description" content="Webservice gratuito para pesquisa de endereço via CEP, suporta Ajax e retorno no formato JSON, XML, PIPED ou QUERY String.">
+        <meta name="rating" content="General">
+        <meta name="revisit-after" content="7">
+        <meta name="google-site-verification" content="UcBPI0QtVFtvB4gxAwjk8ncJuFI5Un5AozPW5yjiNiM">
+        <link href="ViaCEP%20-%20Webservice%20CEP%20e%20IBGE%20gratuito_files/css.css" rel="stylesheet" type="text/css">
+        <link href="ViaCEP%20-%20Webservice%20CEP%20e%20IBGE%20gratuito_files/A.css" rel="stylesheet" type="text/css" media="screen">
+        <!-- <link href="https://viacep.com.br/favicon.ico" rel="shortcut icon" type="image/x-icon"> -->
+        <link rel="dns-prefetch" href="https://www.paypalobjects.com/"></head>
+    <body>
+        <div id="topo">
+            <div class="titulo1" style="padding-top: 20px;">
+                <a href="https://viacep.com.br/" >
+                    <img src="ViaCEP%20-%20Webservice%20CEP%20e%20IBGE%20gratuito_files/logo.png" alt="ViaCEP">
+                </a>
+            </div>
+            <div class="titulo2">
+                O valor da informação em suas mãos
+            </div>
+        </div>
+        <div id="barra"></div>
+        <div id="conteudo">
+            <p>
+                Manual de acesso ao Web Service DwOnline
+            </p>
+            <h2>Acesso ao WebService</h2>
+            <p>
+                O webservice DwOnline pode ser acessado atravez da url: <a>http://dwonline.com.br/desenv/serviceDataWeb/webService/</a>,
+                onde terá acesso as funções abaixo:<br><br>
+
+                <strong>
+                    consultaCnpj<br>
+                    consultaCpf<br>
+                    consultaTelefone<br>
+                    consultaNome<br>
+                    consultaEndereco<br>
+                    consultaCnf<br>
+                </strong><br>
+                Será necessário algumas informações e créditos disponíveis para o retorno das buscas em nosso serviço.<br>
+                <br>
+                Estas informações devem ser passadas via GET ou POST:
+                <br>   
+                <br>
+
+                <strong style="color: orange">consultaCnpj :</strong>  parametros: tns:arrConsultaCnpj  <br><br>
+                array(
+                "login" => ['login'],
+                "cnpjEmpresa" => ['cnpjEmpresa'],
+                "cnpj" => ['cnpj']);
+                <br><br>
+                Onde :<br>
+                &nbsp;&nbsp;&nbsp;<strong>longin</strong> = Neste parametro deverá ser informado o código de liberação do serviço, este código será enviado via e-mail ao responsavel pela conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cnpjEmpresa</strong> = Cnpj informado no cadastro da conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cnpj</strong> = Deverá ser informado o CNPJ no qual se busca informações.
+                <br>
+                <br>
+
+
+                <strong style="color: orange">consultaCpf :</strong>  parametros: tns:arrConsultaCpf  <br><br>
+                array(
+                "login" => ['login'],
+                "cnpjEmpresa" => ['cnpjEmpresa'],
+                "cpf" => ['cpf']);
+                <br><br>
+                Onde :<br>
+                &nbsp;&nbsp;&nbsp;<strong>longin</strong> = Neste parametro deverá ser informado o código de liberação do serviço, este código será enviado via e-mail ao responsavel pela conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cnpjEmpresa</strong> = Cnpj informado no cadastro da conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cpf</strong> = Deverá ser informado o CPF no qual se busca informações.
+                <br>
+                <br>
+
+                <strong style="color: orange">consultaTelefone :</strong>  parametros: tns:arrConsultaTelefone  <br><br>
+                array(
+                "login" => ['login'],
+                "cnpjEmpresa" => ['cnpjEmpresa'],
+                "telefone" => ['telefone'],
+                "ddd"=>['ddd']);
+                <br><br>
+                Onde :<br>
+                &nbsp;&nbsp;&nbsp;<strong>longin</strong> = Neste parametro deverá ser informado o código de liberação do serviço, este código será enviado via e-mail ao responsavel pela conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cnpjEmpresa</strong> = Cnpj informado no cadastro da conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>telefone</strong> = Deverá ser informado o telefone(apenas numero) no qual se busca informações.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>ddd</strong> = Deverá ser informado o dd (apenas numeros) no qual se busca informações.
+                <br>
+                <br>
+                <strong style="color: orange">consultaNome :</strong> parametros: tns:arrConsultaNome <br><br>
+                array(
+                "login" => ['login'],
+                "cnpjEmpresa" => ['cnpjEmpresa'],
+                "nome" => ['nome']);
+                <br><br>
+                Onde :<br>
+                &nbsp;&nbsp;&nbsp;<strong>longin</strong> = Neste parametro deverá ser informado o código de liberação do serviço, este código será enviado via e-mail ao responsavel pela conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cnpjEmpresa</strong> = Cnpj informado no cadastro da conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>nome</strong> = Deverá ser informado o nome da pessoa física no qual se busca informações.
+                <br>
+                <br>
+                <strong style="color: orange">consultaEndereco :</strong>  parametros: tns:arrConsultaEndereco <br><br>
+                array(
+                "login" => ['login'],
+                "cnpjEmpresa" => ['cnpjEmpresa'],
+                "endereco" => ['endereco']
+                "numero" => ['numero']
+                "bairro" => ['bairro']
+                "cidade" => ['cidade']
+                "uf" => ['uf']
+                "cep" => ['cep']
+                );
+                <br><br>
+                Onde :<br>
+                &nbsp;&nbsp;&nbsp;<strong>longin</strong> = Neste parametro deverá ser informado o código de liberação do serviço, este código será enviado via e-mail ao responsavel pela conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cnpjEmpresa</strong> = Cnpj informado no cadastro da conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>endereco</strong> = Deverá ser informado o endereco da pessoa física no qual se busca informações.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>numero</strong> = Deverá ser informado o numero residencial da pessoa física no qual se busca informações.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>bairro</strong> = Deverá ser informado o bairro  da pessoa física no qual se busca informações.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cidade</strong> = Deverá ser informado a cidade da pessoa física no qual se busca informações.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>uf</strong> = Deverá ser informado o estado (ex: sp,mg,ba)  da pessoa física no qual se busca informações.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cep</strong> = Deverá ser informado o cep residencial da pessoa física no qual se busca informações.
+                <br>
+                <br>
+                <strong style="color: orange">consultaNome :</strong> parametros: tns:arrConsultaNome <br><br>
+                array(
+                "login" => ['login'],
+                "cnpjEmpresa" => ['cnpjEmpresa'],
+                "nome" => ['nome']);
+                <br><br>
+                Onde :<br>
+                &nbsp;&nbsp;&nbsp;<strong>longin</strong> = Neste parametro deverá ser informado o código de liberação do serviço, este código será enviado via e-mail ao responsavel pela conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cnpjEmpresa</strong> = Cnpj informado no cadastro da conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>nome</strong> = Deverá ser informado o nome da pessoa física no qual se busca informações.
+                <br>
+                <br>
+                <strong style="color: orange">consultaCnf </strong>  parametros: tns:arrConsultaCnf <br><br>
+                array(
+                "login" => ['login'],
+                "cnpjEmpresa" => ['cnpjEmpresa'],
+                "cpf" => ['cpf']
+
+                );
+                <br><br>
+                Onde :<br>
+                &nbsp;&nbsp;&nbsp;<strong>longin</strong> = Neste parametro deverá ser informado o código de liberação do serviço, este código será enviado via e-mail ao responsavel pela conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cnpjEmpresa</strong> = Cnpj informado no cadastro da conta.
+                <br>
+                &nbsp;&nbsp;&nbsp;<strong>cpf</strong> = Deverá ser informado o cpf da pessoa física no qual se busca informações no banco de dados do <strong>CNF</strong>.
+                <br>
+                <br>
+                </strong><br>
+                <!--
+                                <br>
+                                "<span class="retorno">json</span>",
+                                "<span class="retorno">xml</span>",
+                                "<span class="retorno">piped</span>" ou
+                                "<span class="retorno">querty</span>".
+                            </p>
+                -->
+            <p class="exemplo">
+                Exemplo:
+                <a href="http://dwonline.com.br/desenv/serviceDataWeb/exemploEnvio.php" target="_blank">
+                    dwonline/<span class="cep">serviceDataWeb</span>/<span class="retorno">consultaCpf/exemploPhp</span>/
+                </a>
+            </p>
+            <h2>Retorno webservice DwOnline</h2>
+            <p><h4>&nbsp;&nbsp;&nbsp;Retornos de erros</h4></p>
+        <p> Serão retornados códigos caso algo  impeça o envio das informações. Estes códigos são:</p>
+        <strong>001 - Falha na autenticação</strong><br>
+        <strong>002 - Nada há retornar.</strong><br>
+        <strong>003 - Sem créditos para operação</strong><br>
+        <br>
+
+        <br>
+        <h2>Formato de Retorno</h2>
+        <p>
+            Veja exemplo de acesso ao webservice
+            e seu retorno:
+        </p>
+        <p><pre>
+                object(stdClass)#2 (79) {
+                ["idtb_pessoa_fisica"]=>
+                string(8) "45736778"
+                ["0"]=>
+                string(8) "45736778"
+                ["tb_pessoa_fisica_cpf"]=>
+                string(11) "99999999999"
+                ["1"]=>
+                string(11) "99999999999"
+                ["tb_pessoa_fisica_cpf_2"]=>
+                string(11) "99999999999"
+                ["2"]=>
+                string(11) "99999999999"
+                ["tb_pessoa_fisica_nome"]=>
+                string(21) "JOSE DA SILVA "
+                ["3"]=>
+                string(21) "JOSE DA SILVA"
+                ["tb_pessoa_fisica_cpf_mae"]=>
+                string(1) "0"
+                ["4"]=>
+                string(1) "0"
+                ["tb_pessoa_fisica_nome_mae"]=>
+                string(0) ""
+                ["5"]=>
+                string(0) ""
+                ["tb_pessoa_fisica_sexo"]=>
+                string(1) "M"
+                ["6"]=>
+                string(1) "M"
+                ["tb_pessoa_fisica_data_nascimento"]=>
+                string(8) "19811018"
+                ["7"]=>
+                string(8) "19811018"
+                ["tb_pessoa_fisica_cbo"]=>
+                string(0) ""
+                ["8"]=>
+                string(0) ""
+                ["tb_pessoa_fisica_renda_estimada"]=>
+                string(0) ""
+                ["9"]=>
+                string(0) ""
+                ["tb_pessoa_fisica_classe_social"]=>
+                string(0) ""
+                ["10"]=>
+                string(0) ""
+                ["tb_pessoa_fisica_grau"]=>
+                string(0) ""
+                ["11"]=>
+                string(0) ""
+                ["idtb_pessoa_fisica_end"]=>
+                string(8) "49006130"
+                ["12"]=>
+                string(8) "49006130"
+                ["tb_pessoa_fisica_end_cpf"]=>
+                string(11) "99999999999"
+                ["13"]=>
+                string(11) "99999999999"
+                ["14"]=>
+                string(11) "99999999999"
+                ["tb_pessoa_fisica_end_end"]=>
+                string(13) "PRAÇA DA SÉ"
+                ["15"]=>
+                string(13) "PRAÇA DA SÉ"
+                ["tb_pessoa_fisica_end_num"]=>
+                string(3) "007"
+                ["16"]=>
+                string(3) "007"
+                ["tb_pessoa_fisica_end_compl"]=>
+                string(6) "Apartamento 25"
+                ["17"]=>
+                string(6) "Apartamento 25"
+                ["tb_pessoa_fisica_end_bairro"]=>
+                string(9) "CENTRO"
+                ["18"]=>
+                string(9) "CENTRO"
+                ["tb_pessoa_fisica_end_zona"]=>
+                string(0) ""
+                ["19"]=>
+                string(0) ""
+                ["tb_pessoa_fisica_end_cidade"]=>
+                string(9) "SAO PAULO"
+                ["20"]=>
+                string(9) "SAO PAULO"
+                ["tb_pessoa_fisica_end_cod_ibge"]=>
+                string(0) ""
+                ["21"]=>
+                string(0) ""
+                ["tb_pessoa_fisica_end_uf"]=>
+                string(2) "SP"
+                ["22"]=>
+                string(2) "SP"
+                ["tb_pessoa_fisica_end_cep"]=>
+                string(8) "05415050"
+                ["23"]=>
+                string(8) "05415050"
+                ["tb_pessoa_fisica_end_nota"]=>
+                string(2) "10"
+                ["24"]=>
+                string(2) "10"
+                ["tb_pessoa_fisica_end_data"]=>
+                string(8) "20150101"
+                ["25"]=>
+                string(8) "20150101"
+                ["idtb_pessoa_fisica_fones"]=>
+                string(8) "25262625"
+                ["26"]=>
+                string(8) "25262625"
+                ["tb_pessoa_fisica_fones_cpf"]=>
+                string(11) "99999999999"
+                ["27"]=>
+                string(11) "99999999999"
+                ["28"]=>
+                string(11) "99999999999"
+                ["tb_pessoa_fisica_fones_ddd"]=>
+                string(2) "11"
+                ["29"]=>
+                string(2) "11"
+                ["tb_pessoa_fisica_fones_fone"]=>
+                string(8) "25242425"
+                ["30"]=>
+                string(8) "25242425"
+                ["tb_pessoa_fisica_fones_tipo"]=>
+                string(1) "1"
+                ["31"]=>
+                string(1) "1"
+                ["tb_pessoa_fisica_fones_operadora"]=>
+                string(0) ""
+                ["32"]=>
+                string(0) ""
+                ["tb_pessoa_fisica_fones_procon"]=>
+                string(0) ""
+                ["33"]=>
+                string(0) ""
+                ["tb_pessoa_fisica_fones_data"]=>
+                string(8) "20140930"
+                ["34"]=>
+                string(8) "20140930"
+                ["idtb_pessoa_fisica_email"]=>
+                string(7) "5047237"
+                ["35"]=>
+                string(7) "5047237"
+                ["tb_pessoa_fisica_email_cpf"]=>
+                string(11) "99999999999"
+                ["36"]=>
+                string(11) "99999999999"
+                ["37"]=>
+                string(11) "99999999999"
+                ["tb_pessoa_fisica_email_email"]=>
+                string(28) "JOSEDASILVA@HOTMAIL.COM"
+                ["38"]=>
+                string(28) "JOSEDASILVA@HOTMAIL.COM"
+                ["tb_pessoa_fisica_email_dominio"]=>
+                string(28) "JOSEDASILVA@HOTMAIL.COM"
+                ["39"]=>
+                string(28) "JOSEDASILVA@HOTMAIL.COM"
+                ["tb_pessoa_fisica_email_data"]=>
+                string(8) "20150813"
+                ["40"]=>
+                string(8) "20150813"
+
+        </pre></p>
+
+</body></html>

@@ -1,0 +1,15 @@
+[27-Aug-2014 15:41:49 America/Chicago] PHP Warning:  require_once(nusoap.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/viato987/public_html/fp/webService/index.php on line 3
+[27-Aug-2014 15:41:49 America/Chicago] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'nusoap.php' (include_path='.:/opt/php53/lib/php') in /home/viato987/public_html/fp/webService/index.php on line 3
+[27-Aug-2014 15:42:06 America/Chicago] PHP Warning:  require_once(../nusoap.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/viato987/public_html/fp/webService/index.php on line 3
+[27-Aug-2014 15:42:06 America/Chicago] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '../nusoap.php' (include_path='.:/opt/php53/lib/php') in /home/viato987/public_html/fp/webService/index.php on line 3
+[28-Aug-2014 14:20:31 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
+[28-Aug-2014 14:20:56 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
+[28-Aug-2014 12:22:03 America/Chicago] PHP Fatal error:  Class 'Customer' not found in /home/viato987/public_html/fp/webService/index.php on line 12
+[28-Aug-2014 14:23:23 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
+[28-Aug-2014 14:24:54 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
+[28-Aug-2014 14:25:00 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
+[28-Aug-2014 14:25:30 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
+[28-Aug-2014 14:26:04 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
+[28-Aug-2014 14:26:15 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
+[28-Aug-2014 14:26:48 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
+[28-Aug-2014 14:26:53 America/Sao_Paulo] PHP Catchable fatal error:  Object of class Customer could not be converted to string in /home/viato987/public_html/fp/webService/index.php on line 16
